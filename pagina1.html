@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 1 HTML | Página 1</title>
 </head>
+
 <body>
     <main>
         <div id="links">
-            <h2>Enlaces</h2><br>
+            <h2>Enlaces</h2>
             <ul>
                 <li>
-                    <a href="#">Página 1</a>
+                    <a href="pagina1.html">Página 1</a>
                 </li>
                 <li>
-                    <a href="#">Página 2</a>
+                    <a href="pagina2.html">Página 2</a>
                 </li>
                 <li>
-                    <a href="#">Página 3</a>
+                    <a href="pagina3.html">Página 3</a>
                 </li>
                 <li>
                     <a href="#">Página 4</a>
                 </li>
             </ul>
         </div>
-
+        <br><br>
         <div id="formulario">
             <form>
                 <fieldset>
@@ -36,26 +38,29 @@
                     <input type="text" placeholder="Pequeña descripcion..." name="descript">
                     <label for="id_num">Nº de serie: </label>
                     <input type="text" placeholder="48-5X-X.." name="id_num">
-                    <label for="status">Activo </label>
-                    <input type="checkbox"S name="status" >
-                        <fieldset>
-                            <legend>Prioridad</legend>
-                            <input type="radio"  name="priority" value="priority1" />
-                            <label for="priority1">Alta</label>
+                    <label for="status">El modelo está en activo: </label>
+                    <input type="checkbox" S name="status">
+                    <br><br>
+                    <fieldset>
+                        <legend>Prioridad</legend>
+                        <input type="radio" name="priority" value="priority1" />
+                        <label for="priority1">Alta</label>
 
-                            <input type="radio"  name="priority" value="priority2" />
-                            <label for="priority2">Media</label>
+                        <input type="radio" name="priority" value="priority2" />
+                        <label for="priority2">Media</label>
 
-                            <input type="radio"  name="priority" value="priority3" />
-                            <label for="priority3">Baja</label>
-                        </fieldset>
-                        <br>
+                        <input type="radio" name="priority" value="priority3" />
+                        <label for="priority3">Baja</label>
+                    </fieldset>
+                    <br>
                     <input type="submit" value="Enviar">
+                    <input type="reset" value="Descartar">
 
-        
+
                 </fieldset>
             </form>
         </div>
     </main>
 </body>
+
 </html>
