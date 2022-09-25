@@ -5,13 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica 1 HTML | Página 2</title>
+    <meta http-equiv="refresh" content="350">
+    <link rel="icon" type="image/x-icon" href="img/icono.png" />
+    <meta name="keywords" content="sensor, sensores industriales, motor, maquinaria, industrial" />
+    <meta name="robots" content="follow" />
+    <meta name="author" content="María Isabel Álvarez Gio" />
+    <meta name="copyright" content="María Isabel Álvarez Gio" />
+    <meta name="description" content="Es una web de monitorizacion de stock de sensores industriales." />
+    <title>Practica 1 HTML | Página 3</title>
 </head>
 
 <body>
     <header>
         <div id="logo">
             <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="img/Logo.PNG" height="180px"></a>
+        </div>
+        <div id="menuDesp">
+            <details>
+                <summary>Contacto</summary>
+                <label for="phone-link">Llama ahora automáticamente pinchando en el icono.</label>
+                <p><a id="phone-link" href="tel:+34 93 833 44 49"><img src="img/phone.png"></a></p>
+
+                <form method="post">
+
+                    <div class="emailBox">
+                        <label for="emailAddress">Tu dirección de correo electrónico</label><br />
+                        <input id="emailAddress" type="email" size="64" maxlength="64" required
+                            placeholder="pericopalotes@gmail.com/hotmail.com..."
+                            pattern=".+@gmail\.com,.+@gmail\.es,.+@hotmail\.com,.+@hotmail\.es"
+                            title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
+                    </div>
+
+                    <div class="messageBox">
+                        <label for="message">Solicitud</label><br />
+                        <textarea id="message" cols="60" rows="4" required
+                            placeholder="Indica aquí tu consulta y te contactaremos lo más rápido posible..."></textarea>
+                    </div>
+                    <div class="emailCheck">
+                        <p><input type="checkbox" name="oferta-check" checked> Enviar ofertas y promociones a mi
+                            dirección
+                            de e-mail.</p>
+                    </div>
+                    <input type="submit" value="Enviar solicitud" />
+
+                </form>
+                <form>
+
+
+                </form>
+
+            </details>
         </div>
     </header>
     <main>
@@ -35,41 +78,53 @@
                 </li>
             </ul>
         </div>
-        <h2>Galería</h2>
-        <br>
+        <div class="subtitle">
+            <h2>Galería</h2>
+        </div>
+
         <div id="photo-section">
             <div class="photo">
                 <h3>Sensor 1</h3>
-                <img src="img/1.jpeg" alt="foto de un sensor random">
+
+                <span title='foto cedida por un aficionado'><img src="img/1.jpeg" alt="foto de un sensor random"></span>
                 <p>Una fotico de un sensor</p>
             </div>
+            <hr>
             <div class="photo">
                 <h3>Sensor 2</h3>
-                <img src="img/2.jpeg" alt="foto de un sensor random">
+                <span title='foto cedida por un aficionado'><img src="img/2.jpeg" alt="foto de un sensor random"></span>
                 <p>Una fotico de un sensor</p>
             </div>
+            <hr>
             <div class="photo">
-                <h3>Sensor 1</h3>
-                <img src="img/3.jpeg" alt="foto de un sensor random">
+                <h3>Sensor 3</h3>
+                <span title='foto cedida por un aficionado'><img src="img/3.jpeg" alt="foto de un sensor random"></span>
                 <p>Una fotico de un sensor</p>
             </div>
+            <hr>
             <div class="photo">
-                <h3>Sensor 1</h3>
-                <img src="img/4.jpeg" alt="foto de un sensor random">
+                <h3>Sensor 4</h3>
+                <span title='foto cedida por un aficionado'><img src="img/4.jpeg" alt="foto de un sensor random"></span>
                 <p>Una fotico de un sensor</p>
             </div>
+            <hr>
+            <br>
         </div>
         <div id="photo-form">
             <fieldset>
                 <legend>Sube un item:</legend>
                 <label for="input-name">Ingresa el nombre:</label>
-                <input type="text" size="20" name="input-name" placeholder="Sensor x... " required>
+                <input type="text" size="20" id="input-name" name="foto" placeholder="Sensor x... " required>
                 <br><br>
                 <label for="input-foto">Sube una imagen:</label>
-                <input type="file" name="input-foto" accept="image/png, image/jpeg" required>
+                <input type="file" id="input-foto" name="foto" accept="image/png, image/jpeg" required>
                 <br><br>
                 <label for="input-text">Añade una descripcion:</label>
-                <input type="text" size="50" name="input-text" placeholder="Aquí va la descripción..." required>
+                <input type="text" size="50" id="input-text" name="foto" placeholder="Aquí va la descripción..."
+                    required>
+                <br><br>
+                <label for="colorPicker">Escoge el color: </label>
+                <input type="color" id="colorPicker" name="color">
                 <br><br><br>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Descartar">
@@ -77,7 +132,8 @@
         </div>
     </main>
     <footer>
-        <p>Realizado por <a href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel Álvarez Gio</a></p>
+        <p>Realizado por <a href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel Álvarez Gio</a>
+        </p><a href="#logo"><img src="img/flecha.png"></a>
     </footer>
 </body>
 

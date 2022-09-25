@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="350">
+    <link rel="icon" type="image/x-icon" href="img/icono.png" />
+    <meta name="keywords" content="sensor, sensores industriales, motor, maquinaria, industrial" />
+    <meta name="robots" content="follow" />
+    <meta name="author" content="María Isabel Álvarez Gio" />
+    <meta name="copyright" content="María Isabel Álvarez Gio" />
+    <meta name="description" content="Es una web de monitorizacion de stock de sensores industriales." />
     <title>Practica 1 HTML | Página 1</title>
 </head>
 
@@ -12,6 +19,41 @@
     <header>
         <div id="logo">
             <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="img/Logo.PNG" height="180px"></a>
+        </div>
+        <div id="menuDesp">
+            <details>
+                <summary>Contacto</summary>
+                <label for="phone-link">Llama ahora automáticamente pinchando en el icono.</label>
+                <p><a id="phone-link" href="tel:+34 93 833 44 49"><img src="img/phone.png"></a></p>
+
+                <form method="post">
+
+                    <div class="emailBox">
+                        <label for="emailAddress">Tu dirección de correo electrónico</label><br />
+                        <input id="emailAddress" type="email" size="64" maxlength="64" required
+                            placeholder="pericopalotes@gmail.com/hotmail.com..."
+                            pattern=".+@gmail\.com,.+@gmail\.es,.+@hotmail\.com,.+@hotmail\.es"
+                            title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
+                    </div>
+                    <div class="messageBox">
+                        <label for="message">Solicitud</label><br />
+                        <textarea id="message" cols="60" rows="4" required
+                            placeholder="Indica aquí tu consulta y te contactaremos lo más rápido posible..."></textarea>
+                    </div>
+                    <div class="emailCheck">
+                        <p><input type="checkbox" name="oferta-check" checked> Enviar ofertas y promociones a mi
+                            dirección
+                            de e-mail.</p>
+                    </div>
+                    <input type="submit" value="Enviar solicitud" />
+
+                </form>
+                <form>
+
+
+                </form>
+
+            </details>
         </div>
     </header>
     <main>
@@ -35,33 +77,36 @@
                 </li>
             </ul>
         </div>
-        <h2>Apartado de creación de items</h2>
+        <div class="subtitle">
+            <h2>Apartado de creación de items</h2>
+        </div>
+
         <br>
         <div id="formulario">
             <form>
                 <fieldset>
                     <legend>Creación de productos</legend>
-                    <label for="name">Nombre: </label>
-                    <input type="text" placeholder="Motor, condensador..." name="name">
+                    <label for="p-name">Nombre: </label>
+                    <input type="text" placeholder="Motor, condensador..." id="p-name" name="name" required autofocus>
                     <br><br>
-                    <label for="descript">Descripción: </label>
-                    <input type="text" placeholder="Pequeña descripcion..." name="descript">
+                    <label for="p-descript">Descripción: </label>
+                    <input type="text" placeholder="Pequeña descripcion..." id="p-descript" name="descript" required>
                     <br><br>
-                    <label for="id_num">Nº de serie: </label>
-                    <input type="text" placeholder="48-5X-X.." name="id_num">
+                    <label for="p-id_num">Nº de serie: </label>
+                    <input type="text" placeholder="48-5X-X.." name="id_num" id="p-id_num" required>
                     <br><br>
-                    <label for="status">El modelo está en activo: </label>
-                    <input type="checkbox" S name="status">
+                    <label for="p-status">El modelo está en activo: </label>
+                    <input type="checkbox" id="p-status" name="status" required>
                     <br><br>
                     <fieldset>
                         <legend>Prioridad</legend>
-                        <input type="radio" name="priority" value="priority1" />
+                        <input type="radio" id="priority1" value="High" name="priority" />
                         <label for="priority1">Alta</label>
 
-                        <input type="radio" name="priority" value="priority2" />
+                        <input type="radio" id="priority2" name="priority" value="Medium" />
                         <label for="priority2">Media</label>
 
-                        <input type="radio" name="priority" value="priority3" />
+                        <input type="radio" id="priority3" name="priority" value="Low" />
                         <label for="priority3">Baja</label>
                     </fieldset>
                     <br>
@@ -74,7 +119,8 @@
         </div>
     </main>
     <footer>
-        <p>Realizado por <a href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel Álvarez Gio</a></p>
+        <p>Realizado por <a href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel Álvarez Gio</a>
+        </p> <a href="#logo"><img src="img/flecha.png"></a>
     </footer>
 </body>
 
