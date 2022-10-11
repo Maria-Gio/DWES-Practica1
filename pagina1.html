@@ -12,6 +12,7 @@
     <meta name="author" content="María Isabel Álvarez Gio" />
     <meta name="copyright" content="María Isabel Álvarez Gio" />
     <meta name="description" content="Es una web de monitorizacion de stock de sensores industriales." />
+    <script defer src="./js/functions.js"></script>
     <title>Practica 1 HTML | Página 1</title>
 </head>
 
@@ -80,19 +81,20 @@
         <br>
         <div id="formulario">
             <form action="createElement.php" method="POST">
+
                 <fieldset>
                     <legend>Creación de productos</legend>
-                    <label for="p-name">Nombre: </label>
-                    <input type="text" placeholder="Motor, condensador..." id="p-name" name="name" required autofocus>
+                    <label for="p_name">Nombre: </label>
+                    <input type="text" placeholder="Motor, condensador..." id="p_name" name="name" required autofocus>
                     <br><br>
-                    <label for="p-descript">Descripción: </label>
-                    <input type="text" placeholder="Pequeña descripcion..." id="p-descript" name="descript" required>
+                    <label for="p_descript">Descripción: </label>
+                    <input type="text" placeholder="Pequeña descripcion..." id="p_descript" name="descript" required>
                     <br><br>
-                    <label for="p-id_num">Nº de serie: </label>
-                    <input type="text" placeholder="48-5X-X.." name="id_num" id="p-id_num" required>
+                    <label for="p_id_num">Nº de serie: </label>
+                    <input type="text" placeholder="48-5X-X.." name="id_num" id="p_id_num" required>
                     <br><br>
-                    <label for="p-status">El modelo está en activo: </label>
-                    <input type="checkbox" id="p-status" name="status" required>
+                    <label for="p_status">El modelo está en activo: </label>
+                    <input type="checkbox" id="p_status" name="status" required>
                     <br><br>
                     <fieldset>
                         <legend>Prioridad</legend>
@@ -106,7 +108,7 @@
                         <label for="priority3">Baja</label>
                     </fieldset>
                     <br>
-                    <input type="submit" value="Enviar">
+                    <button id="buildFormButton">Enviar</button>
                     <input type="reset" value="Descartar">
 
                 </fieldset>

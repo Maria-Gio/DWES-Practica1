@@ -12,6 +12,7 @@
     <meta name="author" content="María Isabel Álvarez Gio" />
     <meta name="copyright" content="María Isabel Álvarez Gio" />
     <meta name="description" content="Es una web de monitorizacion de stock de sensores industriales." />
+    <script defer src="./js/functions.js"></script>
     <title>Practica 1 HTML | Página 2</title>
 </head>
 
@@ -76,54 +77,64 @@
         <div class="subtitle">
             <h2>Tabla de datos</h2>
         </div>
-
+        <div id="divFinderInput">
+            <form id="searchForm">
+                <input type="text" id="searchInput" name="search" placeholder="Busca aquis">
+            </form>
+        </div>
         <br>
         <div id="tabla">
             <table border="1px">
-
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Nº de serie</th>
-                    <th>Estado</th>
-                    <th>Prioridad</th>
-                </tr>
-                <tr>
-                    <td>Motor trivolution</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Máquina full de power que hace cosas</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>04-5X-36-110</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Activo</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>Alta</td>
-                </tr>
-
+                <tbody id="tableBody">
+                    <tr>
+                        <th>Acciones</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Número de serie</th>
+                        <th>Estado</th>
+                        <th>Prioridad</th>
+                    </tr>
+                    <tr>
+                        <td><button>X</button></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Descripción...</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Num de serie</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Estado</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Prioridad</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </main>
