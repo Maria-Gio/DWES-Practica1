@@ -116,8 +116,24 @@ class Element implements IToJson
 
         return $this;
     }
-    function toJson()
+    public function toJson($archivo)
     {
-        echo (json_encode($this));
+        $data = json_encode(get_object_vars($this));
+        echo "Previsualizacion del JSon:" . $data . "<br>";
+        return $data;
+    }
+    public function writeJson($object, $ruta)
+    {
+        $data = $object->toJson($object);
+        if (fopen($ruta, "r")) {
+            $datosNuevos = file_get_contents($ruta);
+            $datosNuevos .= $data . ",";
+            file_put_contents($ruta, $datosNuevos);
+            echo ("Datos guardados en " . $ruta);
+        }
+        else {
+            echo ("El archivo no esta");
+        }
+
     }
 }

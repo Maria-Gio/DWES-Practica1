@@ -2,5 +2,5 @@
 interface IToJson
 {
 
-    public function toJson();
+    public function toJson($archivo);
 }
