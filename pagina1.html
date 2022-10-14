@@ -6,51 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="350">
-    <link rel="icon" type="image/x-icon" href="img/icono.png" />
+    <link rel="icon" type="image/x-icon" href="css/img/icono.png" />
     <meta name="keywords" content="sensor, sensores industriales, motor, maquinaria, industrial" />
     <meta name="robots" content="follow" />
     <meta name="author" content="María Isabel Álvarez Gio" />
     <meta name="copyright" content="María Isabel Álvarez Gio" />
     <meta name="description" content="Es una web de monitorizacion de stock de sensores industriales." />
     <script defer src="./js/functions.js"></script>
+    <link href="stylesheet" href="css/normalize.css" />
+    <link href="css/style1.css" rel="stylesheet" type="text/css" />
     <title>Practica 1 HTML | Página 1</title>
 </head>
 
 <body>
     <header>
-        <div id="logo">
-            <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="img/Logo.PNG" height="180px"></a>
-        </div>
-        <div id="menuDesp">
-            <details>
-                <summary>Contacto</summary>
-                <label for="phone-link">Llama ahora automáticamente pinchando en el icono.</label>
-                <p><a id="phone-link" href="tel:+34 93 833 44 49"><img src="img/phone.png"></a></p>
+        <div id="header">
+            <div id="logo">
+                <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="css/img/Logo.PNG"
+                        height="180px"></a>
+            </div>
+            <div id="menuDesp">
+                <details>
+                    <summary>Contacto</summary>
+                    <label for="phone-link">Llama ahora automáticamente pinchando en el icono.</label>
+                    <p><a id="phone-link" href="tel:+34 93 833 44 49"><img src="css/img/phone.png"></a></p>
 
-                <form method="post">
+                    <form method="post">
 
-                    <div class="emailBox">
-                        <label for="emailAddress">Tu dirección de correo electrónico</label><br />
-                        <input id="emailAddress" type="email" size="64" maxlength="64" required
-                            placeholder="pericopalotes@gmail.com/hotmail.com..."
-                            pattern=".+@gmail\.com,.+@gmail\.es,.+@hotmail\.com,.+@hotmail\.es"
-                            title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
-                    </div>
-                    <div class="messageBox">
-                        <label for="message">Solicitud</label><br />
-                        <textarea id="message" cols="60" rows="4" required
-                            placeholder="Indica aquí tu consulta y te contactaremos lo más rápido posible..."></textarea>
-                    </div>
-                    <div class="emailCheck">
-                        <p><input type="checkbox" name="oferta-check" checked> Enviar ofertas y promociones a mi
-                            dirección
-                            de e-mail.</p>
-                    </div>
-                    <input type="submit" value="Enviar solicitud" />
+                        <div class="emailBox">
+                            <label for="emailAddress">Tu dirección de correo electrónico</label><br />
+                            <input id="emailAddress" type="email" size="64" maxlength="64" required
+                                placeholder="pericopalotes@gmail.com/hotmail.com..."
+                                pattern=".+@gmail\.com,.+@gmail\.es,.+@hotmail\.com,.+@hotmail\.es"
+                                title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
+                        </div>
+                        <div class="messageBox">
+                            <label for="message">Solicitud</label><br />
+                            <textarea id="message" cols="60" rows="4" required
+                                placeholder="Indica aquí tu consulta y te contactaremos lo más rápido posible..."></textarea>
+                        </div>
+                        <div class="emailCheck">
+                            <p><input type="checkbox" name="oferta-check" checked> Enviar ofertas y promociones a mi
+                                dirección
+                                de e-mail.</p>
+                        </div>
+                        <input type="submit" value="Enviar solicitud" />
 
-                </form>
+                    </form>
 
-            </details>
+                </details>
+            </div>
         </div>
     </header>
     <main>
@@ -117,7 +122,7 @@
     </main>
     <footer>
         <p>Realizado por <a href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel Álvarez Gio</a>
-        </p> <a href="#logo"><img src="img/flecha.png"></a>
+        </p> <a href="#logo"><img src="css/img/flecha.png"></a>
     </footer>
 </body>
 

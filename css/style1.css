@@ -1,0 +1,19 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+/*HEADER*/
+#header{
+    background-color: aqua;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#logo img{
+    height: 7.5em;
+}
+#menuDesp{
+    position: relative;
+    top:5.3em;
+}
