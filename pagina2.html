@@ -79,62 +79,24 @@
         </div>
         <div id="divFinderInput">
             <form id="searchForm">
-                <input type="text" id="searchInput" name="search" placeholder="Busca aquis">
+                <input type="text" id="searchInput" name="search" oninput="checkInput();" placeholder="Busca aquis">
             </form>
         </div>
         <br>
         <div id="tabla">
-            <table border="1px">
+            <table id="tablaWena" border="1px">
+
+                <tr>
+                    <th>Acciones</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Número de serie</th>
+                    <th>Estado</th>
+                    <th>Prioridad</th>
+                </tr>
                 <tbody id="tableBody">
-                    <tr>
-                        <th>Acciones</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Número de serie</th>
-                        <th>Estado</th>
-                        <th>Prioridad</th>
-                    </tr>
-                    <tr>
-                        <td><button>X</button></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Descripción...</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>Num de serie</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>Estado</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>Prioridad</td>
-                    </tr>
                 </tbody>
+
             </table>
         </div>
     </main>

@@ -15,5 +15,6 @@ if ($_POST["status"] == "on") {
 else {
     $usr_status = false;
 }
+
 $elemento = new Element($usr_name, $usr_descript, $usr_id_num, $usr_status, $usr_priority);
 $elemento->writeJson($elemento, "elementos.txt");

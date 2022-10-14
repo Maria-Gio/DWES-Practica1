@@ -119,12 +119,12 @@ class Element implements IToJson
     public function toJson($archivo)
     {
         $data = json_encode(get_object_vars($this));
-        echo "Previsualizacion del JSon:" . $data . "<br>";
         return $data;
     }
     public function writeJson($object, $ruta)
     {
         $data = $object->toJson($object);
+        echo "Previsualizacion del JSon:" . $data . "<br>";
         if (fopen($ruta, "r")) {
             $datosNuevos = file_get_contents($ruta);
             $datosNuevos .= $data . ",";
