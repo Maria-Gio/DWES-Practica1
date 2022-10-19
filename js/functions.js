@@ -2,7 +2,7 @@
 const searchInput = document.querySelector("#searchInput");
 const searchForm = document.querySelector("#searchForm");
 
-window.onload = crearTabla;
+window.onload = createTable;
 
 function introSubmit(event) {
     if (event.keyCode === 13) {
@@ -32,34 +32,43 @@ const JSon = [{
 function checkInput() {
     if (searchInput.value.length > 3) {
 
-        filtrar();
+        filterTable();
     } else {
-        crearTabla();
+        createTable();
     }
 }
-function crearTabla() {
+function createTable() {
     const tbody = document.querySelector("#tableBody");
     tbody.innerHTML = "";
-
+    let text = "";
     for (i = 0; i < JSon.length; i++) {
-        let fila = `<tr id="fila${i}">
-            <td><button id="${i}"onclick="deleteRow(this)">Borrar</button ></td>
-            <td>${JSon[i].name}</td>
-            <td>${JSon[i].descript}</td>
-            <td>${JSon[i].id_num}</td>
-            <td>${JSon[i].status}</td>
-            <td>${JSon[i].priority}</td>
-            </tr>`
-        tbody.innerHTML += fila;
-    }
+        let tr1 = 0;
+        while (tr1 < 1) {
+            let trWrite = `<tr id="fila${i}">
+            <td><button id="${i}"onclick="deleteRow(this)">Borrar</button ></td>`
+            text += trWrite;
+            tr1++;
 
+            let tableRow = Object.entries(JSon[i]);
+            for (let attribute of tableRow) {
+                let tdWrite = `<td>${attribute[1]}</td>`
+                text += tdWrite;
+            }
+
+        }
+
+
+    }
+    let endWrite = `</tr > `
+    text += endWrite;
+    tbody.innerHTML = text;
 }
 
 function deleteRow(button) {
     let id = button.id;
     document.querySelector("#fila" + id).remove();
 }
-function filtrar() {
+function filterTable() {
     let text = searchInput.value.toLowerCase();
     let myTr = document.querySelectorAll("tr");
 
@@ -67,17 +76,18 @@ function filtrar() {
         return;
     }
 
-    for (let tdAt of myTr) {
-        let attrDescript = tdAt.children[2].innerText;
-        let AttrName = tdAt.children[1].innerText;
+    for (let tdAttribute of myTr) {
+        let attrDescript = tdAttribute.children[2].innerText;
+        let attrName = tdAttribute.children[1].innerText;
 
-        if (attrDescript.toLowerCase().includes(text) || AttrName.toLowerCase().includes(text)) {
-            tdAt.style.backgroundColor = "blue"
+        if (attrDescript.toLowerCase().includes(text) || attrName.toLowerCase().includes(text)) {
+            tdAttribute.style.backgroundColor = "blue"
         } else {
-            tdAt.style.backgroundColor = "transparent";
+            tdAttribute.style.backgroundColor = "transparent";
         }
     }
 }
+
 
 
 

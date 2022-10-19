@@ -12,7 +12,6 @@
     <meta name="author" content="María Isabel Álvarez Gio" />
     <meta name="copyright" content="María Isabel Álvarez Gio" />
     <meta name="description" content="Es una web de monitorizacion de stock de sensores industriales." />
-    <script defer src="./js/functions.js"></script>
     <link href="stylesheet" href="css/normalize.css" />
     <link href="css/style1.css" rel="stylesheet" type="text/css" />
     <title>Practica 1 HTML | Página 1</title>
@@ -27,7 +26,7 @@
             </div>
             <div id="menuDesp">
                 <details>
-                    <summary>Contacto</summary>
+                    <summary><img src="./css/img/contacto.png" /></summary>
                     <label for="phone-link">Llama ahora automáticamente pinchando en el icono.</label>
                     <p><a id="phone-link" href="tel:+34 93 833 44 49"><img src="css/img/phone.png"></a></p>
 
@@ -99,11 +98,11 @@
                     <input type="text" placeholder="48-5X-X.." name="id_num" id="p_id_num" required>
                     <br><br>
                     <label for="p_status">El modelo está en activo: </label>
-                    <input type="checkbox" id="p_status" name="status" required>
+                    <input type="checkbox" id="p_status" name="status">
                     <br><br>
                     <fieldset>
                         <legend>Prioridad</legend>
-                        <input type="radio" id="priority1" value="High" name="priority" />
+                        <input type="radio" id="priority1" value="High" name="priority" required />
                         <label for="priority1">Alta</label>
 
                         <input type="radio" id="priority2" name="priority" value="Medium" />

@@ -1,4 +1,7 @@
 <?php
+namespace ElementoPHP;
+
+use iToJsonPHP\IToJson;
 class Element implements IToJson
 {
     private $name;
