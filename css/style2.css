@@ -25,7 +25,7 @@ a:hover {
     border: none;
     height: 33px;
     width: 80px;
-    border-radius: 7%;
+    border-radius: 5px;
 
     box-shadow: 1.5px 2.5px #1d1d5e;
 }
@@ -47,14 +47,15 @@ body {
 }
 
 footer {
-    bottom: 8;
-    position: absolute;
+
     width: 100%;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    top: 35em;
+    position: absolute;
     color: rgb(131 8 26 / 90%);
     text-shadow: 2px 2px 5px rgb(27 26 26 / 55%);
     font-size: larger;
+    justify-content: center;
 }
 
 #footerName {
@@ -200,7 +201,6 @@ details>summary:first-of-type {
     border-bottom: 1px solid rgba(255, 4, 4, 0.455);
 }
 
-
 #links h3 {
     display: none;
 }
@@ -210,54 +210,7 @@ details>summary:first-of-type {
     display: none;
 }
 
-/*Contenido principal*/
-#subtitle {
-    left: 36.5em;
-    margin-top: 8px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    height: 3em;
-    backdrop-filter: blur(1px);
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px;
-    background: rgb(61 57 57 / 10%);
-    color: #2c2c30;
-}
-
-#princContent {
-    display: grid;
-    place-items: center;
-    margin: 34px;
-    margin-bottom: 5px;
-}
-
-#formulario {
-    background-color: rgb(17 0 65 / 35%);
-    margin: 15px;
-    margin-top: 31px;
-    backdrop-filter: blur(2px);
-    padding: 5px;
-    display: inline-block;
-    height: 25em;
-    width: 14em;
-    border-radius: 6%;
-    box-shadow: 1px 2px rgb(20 4 65 / 49%);
-
-
-}
-
-#formContent {
-    display: grid;
-    padding: 10px;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-row-gap: 26px;
-    font-size: 17px;
-    margin-top: 1em;
-}
-
+/*formato input*/
 .input {
     background-color: transparent;
     outline: none;
@@ -297,62 +250,110 @@ details>summary:first-of-type {
     font-size: 17px;
 }
 
-
-#formContent-name {}
-
-#formContent-description {}
-
-#formContent-id {}
-
-#formContent-check {
+/*Contenido principal*/
+#subtitle {
+    left: 41.5em;
+    margin-top: 19px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 3em;
+    backdrop-filter: blur(1px);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px;
+    background: rgb(61 57 57 / 10%);
     color: #2c2c30;
-    padding-top: 8px;
-    padding-right: 2.6em;
-    font-size: 17px;
-    border-top: 2px solid #bf050576;
 }
 
-#formContent-check>label:hover {
-    color: #bf0505fb;
+#princContent {
+    display: grid;
+    place-items: center;
+
 }
 
-#formContent-priority {
-    text-align: left;
-    margin-top: -5px;
-    margin-bottom: -11px;
+#bloqueTabla {
+    padding: 18px;
+    background-color: rgb(17 0 65 / 35%);
+    margin: 19px;
+    margin-top: 107px;
+    backdrop-filter: blur(2px);
+    border-radius: 2%;
+    box-shadow: 1px 2px rgb(20 4 65 / 49%);
+
 }
 
-#formContent-priority input[type="radio"] {
-    margin: 7px;
+#divFinderInput {
+    margin-bottom: 8px;
+    
 }
 
-#formContent-priority>label {
-    color: #2c2c30;
-    padding-right: 96px;
-
-    font-size: 17px;
+#searchInput {
+    width: 27em;
+    height: 1.5em;
+    padding: 1px;
+    border: none;
+    outline: none;
 }
 
-#formContent-priority>label:hover {
-    color: rgba(34, 4, 118, 0.9)
+#searchInput:focus {
+    border: none;
+    outline: none;
 }
 
-
-#formContent-priority input[type="radio"]:checked+label {
-    color: #bf0505fb;
+th {
+    background-color: #5f5fc4b5;
+    padding: 7px;
 }
 
-
-#formContent-priority p {
-    margin: 7px;
-    padding-left: 3px;
-    margin-bottom: 12px;
-    color: #2c2c30;
-    border-bottom: 2px solid #bf050576;
-    padding-right: 96px;
-    font-size: 17px;
+td {
+    background-color: #bbbfc1;
+    padding: 5px;
 }
 
-#formContent-buttons {
-    margin-top: -11px;
+tr {
+    border: 0.5px solid gray;
+}
+
+table {
+    border-spacing: 0 4px;
+}
+
+table button {
+    background-color: #606064b5;
+    border: none;
+    height: 23px;
+    width: 77px;
+    border-radius: 4px;
+    box-shadow: 1.5px 2.5px #080808b5;
+}
+
+table button:hover {
+    background-color: #606064b5;
+    color: white;
+    box-shadow: inset 1.5px 2.5px #080808b5;
+}
+
+#tableBody tr {
+    border: 3px solid blue;
+}
+
+#searchButton {
+    margin-bottom: -3px;
+    height: 1em;
+}
+
+#barraBusca {
+    background: white;
+    width: 25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+#restoreButton {
+    width: 100px;
+    background-color: #b9b9f6b5;
+    margin-top: 5px;
 }

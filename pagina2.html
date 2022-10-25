@@ -12,45 +12,46 @@
     <meta name="author" content="María Isabel Álvarez Gio" />
     <meta name="copyright" content="María Isabel Álvarez Gio" />
     <meta name="description" content="Es una web de monitorizacion de stock de sensores industriales." />
+    <link href="css/style2.css" rel="stylesheet" type="text/css" />
     <script defer src="./js/functions.js"></script>
     <title>Practica 1 HTML | Página 2</title>
 </head>
 
 <body>
     <header>
-        <div id="logo">
-            <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="css/img/Logo.PNG" height="180px"></a>
-        </div>
-        <div id="menuDesp">
-            <details>
-                <summary>Contacto</summary>
-                <label for="phone-link">Llama ahora automáticamente pinchando en el icono.</label>
-                <p><a id="phone-link" href="tel:+34 93 833 44 49"><img src="css/img/phone.png"></a></p>
+        <div id="header">
+            <div id="logo">
+                <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="css/img/logo_footer.png"
+                        height="180px"></a>
+            </div>
+            <div id="menuDesp">
+                <details>
+                    <summary><img src="./css/img/contacto.png" /></summary>
 
-                <form method="post">
+                    <form method="post">
 
-                    <div class="emailBox">
-                        <label for="emailAddress">Tu dirección de correo electrónico</label><br />
-                        <input id="emailAddress" type="email" size="64" maxlength="64" required
-                            placeholder="pericopalotes@gmail.com/hotmail.com..."
-                            pattern=".+@gmail\.com,.+@gmail\.es,.+@hotmail\.com,.+@hotmail\.es"
-                            title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
-                    </div>
+                        <div class="emailBox">
+                            <input class="input" id="emailAddress" type="email" size="64" maxlength="64" required
+                                placeholder="Ingresa tu correo electronico "
+                                pattern=".+@gmail\.com,.+@gmail\.es,.+@hotmail\.com,.+@hotmail\.es"
+                                title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
+                        </div>
+                        <div class="messageBox">
+                            <textarea id="message" cols="60" rows="4" required
+                                placeholder="Indica aquí tu consulta y te contactaremos lo más rápido posible..."></textarea>
+                        </div>
+                        <div class="emailCheck">
+                            <p><input type="checkbox" id="check" checked><label for="check"> Enviar ofertas y
+                                    promociones a mi dirección de e-mail</label>
+                        </div>
+                        <div id="menuDespButton">
+                            <button class="button" id="contactButton">Enviar</button>
+                        </div>
 
-                    <div class="messageBox">
-                        <label for="message">Solicitud</label><br />
-                        <textarea id="message" cols="60" rows="4" required
-                            placeholder="Indica aquí tu consulta y te contactaremos lo más rápido posible..."></textarea>
-                    </div>
-                    <div class="emailCheck">
-                        <p><input type="checkbox" name="oferta-check" checked> Enviar ofertas y promociones a mi
-                            dirección
-                            de e-mail.</p>
-                    </div>
-                    <input type="submit" value="Enviar solicitud" />
+                    </form>
 
-                </form>
-            </details>
+                </details>
+            </div>
         </div>
     </header>
     <main>
@@ -74,36 +75,46 @@
                 </li>
             </ul>
         </div>
-        <div class="subtitle">
+        <div id="subtitle">
             <h2>Tabla de datos</h2>
         </div>
-        <div id="divFinderInput">
-            <form id="searchForm">
-                <input type="text" id="searchInput" name="search" oninput="checkInput();" placeholder="Busca aqui...">
-            </form>
-        </div>
-        <br>
-        <div id="tabla">
-            <table  border="1px">
+        <div id="princContent">
+            <div id="bloqueTabla">
+                <div id="divFinderInput">
+                    <div id="barraBusca">
+                        <form id="searchForm">
+                            <input type="text" id="searchInput" name="search" oninput="checkInput();"
+                                placeholder="Busca aqui...">
+                            <img id="searchButton" src="./css/img/buscar.png">
+                        </form>
+                    </div>
+                </div>
 
-                <tr>
-                    <th>Acciones</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Número de serie</th>
-                    <th>Estado</th>
-                    <th>Prioridad</th>
-                </tr>
-                <tbody id="tableBody">
-                </tbody>
+                <div id="tabla">
+                    <table>
+                        <tr>
+                            <th>Acciones</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Número de serie</th>
+                            <th>Estado</th>
+                            <th>Prioridad</th>
+                        </tr>
+                        <tbody id="tableBody">
+                        </tbody>
 
-            </table>
-            <button id="restoreButton" onclick="createTable()">Restore Table</button >
+                    </table>
+                    <button id="restoreButton" class="button" onclick="createTable()">Restore Table</button>
+
+
+                </div>
+            </div>
         </div>
+        <div id="botonUp"><a href="#logo"><img src="css/img/flecha.png"></a></div>
     </main>
     <footer>
-        <p>Realizado por <a href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel Álvarez Gio</a>
-        </p><a href="#logo"><img src="css/img/flecha.png"></a>
+        <p>Realizado por <a id="footerName" href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel Álvarez Gio</a>
+        </p>
     </footer>
 </body>
 

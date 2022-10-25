@@ -12,6 +12,9 @@
     <meta name="author" content="María Isabel Álvarez Gio" />
     <meta name="copyright" content="María Isabel Álvarez Gio" />
     <meta name="description" content="Es una web de monitorizacion de stock de sensores industriales." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="stylesheet" href="css/normalize.css" />
     <link href="css/style1.css" rel="stylesheet" type="text/css" />
     <title>Practica 1 HTML | Página 1</title>
@@ -21,35 +24,31 @@
     <header>
         <div id="header">
             <div id="logo">
-                <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="css/img/Logo.PNG"
+                <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="css/img/logo_footer.png"
                         height="180px"></a>
             </div>
             <div id="menuDesp">
                 <details>
                     <summary><img src="./css/img/contacto.png" /></summary>
-                    <label for="phone-link">Llama ahora automáticamente pinchando en el icono.</label>
-                    <p><a id="phone-link" href="tel:+34 93 833 44 49"><img src="css/img/phone.png"></a></p>
 
                     <form method="post">
 
                         <div class="emailBox">
-                            <label for="emailAddress">Tu dirección de correo electrónico</label><br />
-                            <input id="emailAddress" type="email" size="64" maxlength="64" required
-                                placeholder="pericopalotes@gmail.com/hotmail.com..."
+                            <input class="input" id="emailAddress" type="email" size="64" maxlength="64" required
+                                placeholder="Ingresa tu correo electronico "
                                 pattern=".+@gmail\.com,.+@gmail\.es,.+@hotmail\.com,.+@hotmail\.es"
                                 title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
                         </div>
                         <div class="messageBox">
-                            <label for="message">Solicitud</label><br />
                             <textarea id="message" cols="60" rows="4" required
                                 placeholder="Indica aquí tu consulta y te contactaremos lo más rápido posible..."></textarea>
                         </div>
                         <div class="emailCheck">
-                            <p><input type="checkbox" name="oferta-check" checked> Enviar ofertas y promociones a mi
-                                dirección
-                                de e-mail.</p>
+                            <p><input type="checkbox" id="check" checked><label for="check"> Enviar ofertas y promociones a mi dirección de e-mail</label>
                         </div>
-                        <input type="submit" value="Enviar solicitud" />
+                        <div id="menuDespButton">
+                            <button class="button" id="contactButton">Enviar</button>
+                        </div>
 
                     </form>
 
@@ -78,50 +77,61 @@
                 </li>
             </ul>
         </div>
-        <div class="subtitle">
+        <div id="subtitle">
             <h2>Apartado de creación de items</h2>
         </div>
 
         <br>
-        <div id="formulario">
-            <form action="createElement.php" method="POST">
+        <div id="princContent">
+            <div id="formulario">
+                <form action="createElement.php" method="POST">
+                    <div id="formContent">
 
-                <fieldset>
-                    <legend>Creación de productos</legend>
-                    <label for="p_name">Nombre: </label>
-                    <input type="text" placeholder="Motor, condensador..." id="p_name" name="name" required autofocus>
-                    <br><br>
-                    <label for="p_descript">Descripción: </label>
-                    <input type="text" placeholder="Pequeña descripcion..." id="p_descript" name="descript" required>
-                    <br><br>
-                    <label for="p_id_num">Nº de serie: </label>
-                    <input type="text" placeholder="48-5X-X.." name="id_num" id="p_id_num" required>
-                    <br><br>
-                    <label for="p_status">El modelo está en activo: </label>
-                    <input type="checkbox" id="p_status" name="status">
-                    <br><br>
-                    <fieldset>
-                        <legend>Prioridad</legend>
-                        <input type="radio" id="priority1" value="High" name="priority" required />
-                        <label for="priority1">Alta</label>
+                        <div id="formContent-name">
+                            <input type="text" class="input" placeholder="Nombre" id="p_name" name="name" required
+                                autofocus>
+                        </div>
 
-                        <input type="radio" id="priority2" name="priority" value="Medium" />
-                        <label for="priority2">Media</label>
+                        <div id="formContent-description">
+                            <input type="text" class="input" placeholder="Descripción" id="p_descript" name="descript"
+                                required>
+                        </div>
 
-                        <input type="radio" id="priority3" name="priority" value="Low" />
-                        <label for="priority3">Baja</label>
-                    </fieldset>
-                    <br>
-                    <button id="buildFormButton">Enviar</button>
-                    <input type="reset" value="Descartar">
+                        <div id="formContent-id">
+                            <input type="text" class="input" placeholder="Nº ID" name="id_num" id="p_id_num" required>
+                        </div>
+                        <div id="formContent-priority">
+                            <p>Prioridad</p>
+                            <input type="radio" id="priority1" value="High" name="priority" required />
+                            <label for="priority1">Alta</label>
+                            <br>
+                            <input type="radio" id="priority2" name="priority" value="Medium" />
+                            <label for="priority2">Media</label>
+                            <br>
+                            <input type="radio" id="priority3" name="priority" value="Low" />
+                            <label for="priority3">Baja</label>
+                        </div>
+                        <div id="formContent-check">
+                            <input type="checkbox" id="p_status" name="status">
+                            <label for="p_status">Modelo activo</label>
+                        </div>
+                        <div id="formContent-buttons">
+                            <button class="button"id="buildFormButton">Enviar</button>
+                            <button class="button"id="resetButton">Reset</button>
+                        </div>
 
-                </fieldset>
-            </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="botonUp">
+            <a href="#logo"><img src="css/img/flecha.png"></a>
         </div>
     </main>
     <footer>
-        <p>Realizado por <a href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel Álvarez Gio</a>
-        </p> <a href="#logo"><img src="css/img/flecha.png"></a>
+        <p>Realizado por <a id="footerName" href="https://es.wikipedia.org/wiki/Isabel_II_del_Reino_Unido">María Isabel
+                Álvarez Gio</a>
+        </p>
     </footer>
 </body>
 

@@ -19,7 +19,6 @@ a:hover {
     color: rgba(255, 4, 4, 0.455);
     text-shadow: 1px 1px #3d0000;
 }
-
 .button {
     background-color: #B5BDC6;
     border: none;
@@ -35,7 +34,6 @@ a:hover {
     color: white;
     box-shadow: none;
 }
-
 body {
     background-image: url(./img/fondo.jpeg);
     background-position: center center;
@@ -47,8 +45,7 @@ body {
 }
 
 footer {
-    bottom: 8;
-    position: absolute;
+
     width: 100%;
     align-items: center;
     text-align: center;
@@ -178,7 +175,6 @@ details>summary:first-of-type {
     width: 109px;
     border-radius: 9%
 }
-
 /*Barra de navegacion*/
 #links {
     display: flex;
@@ -196,68 +192,19 @@ details>summary:first-of-type {
     padding: 14px;
 }
 
-#links li:hover {
-    border-bottom: 1px solid rgba(255, 4, 4, 0.455);
+#links li:hover{
+    border-bottom:1px solid rgba(255, 4, 4, 0.455);
 }
-
-
 #links h3 {
     display: none;
 }
 
 /*Boton de subir*/
 #botonUp {
-    display: none;
-}
-
-/*Contenido principal*/
-#subtitle {
-    left: 36.5em;
-    margin-top: 8px;
     position: absolute;
-    display: flex;
-    align-items: center;
-    height: 3em;
-    backdrop-filter: blur(1px);
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px;
-    background: rgb(61 57 57 / 10%);
-    color: #2c2c30;
+    right: 0;
 }
-
-#princContent {
-    display: grid;
-    place-items: center;
-    margin: 34px;
-    margin-bottom: 5px;
-}
-
-#formulario {
-    background-color: rgb(17 0 65 / 35%);
-    margin: 15px;
-    margin-top: 31px;
-    backdrop-filter: blur(2px);
-    padding: 5px;
-    display: inline-block;
-    height: 25em;
-    width: 14em;
-    border-radius: 6%;
-    box-shadow: 1px 2px rgb(20 4 65 / 49%);
-
-
-}
-
-#formContent {
-    display: grid;
-    padding: 10px;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-row-gap: 26px;
-    font-size: 17px;
-    margin-top: 1em;
-}
-
+/*formato input*/
 .input {
     background-color: transparent;
     outline: none;
@@ -281,7 +228,6 @@ details>summary:first-of-type {
     border-bottom-color: rgba(34, 4, 118, 0.9);
     ;
 }
-
 /*Formato para los placeholders en opera, chrome...*/
 ::placeholder {
     font-family: 'Roboto', sans-serif;
@@ -297,62 +243,24 @@ details>summary:first-of-type {
     font-size: 17px;
 }
 
-
-#formContent-name {}
-
-#formContent-description {}
-
-#formContent-id {}
-
-#formContent-check {
+/*Contenido principal*/
+#subtitle {
+    left: 36.5em;
+    margin-top: 8px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 3em;
+    backdrop-filter: blur(1px);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px;
+    background: rgb(61 57 57 / 10%);
     color: #2c2c30;
-    padding-top: 8px;
-    padding-right: 2.6em;
-    font-size: 17px;
-    border-top: 2px solid #bf050576;
 }
 
-#formContent-check>label:hover {
-    color: #bf0505fb;
-}
+#princContent {
+    display: grid;
+    place-items: center;
 
-#formContent-priority {
-    text-align: left;
-    margin-top: -5px;
-    margin-bottom: -11px;
-}
-
-#formContent-priority input[type="radio"] {
-    margin: 7px;
-}
-
-#formContent-priority>label {
-    color: #2c2c30;
-    padding-right: 96px;
-
-    font-size: 17px;
-}
-
-#formContent-priority>label:hover {
-    color: rgba(34, 4, 118, 0.9)
-}
-
-
-#formContent-priority input[type="radio"]:checked+label {
-    color: #bf0505fb;
-}
-
-
-#formContent-priority p {
-    margin: 7px;
-    padding-left: 3px;
-    margin-bottom: 12px;
-    color: #2c2c30;
-    border-bottom: 2px solid #bf050576;
-    padding-right: 96px;
-    font-size: 17px;
-}
-
-#formContent-buttons {
-    margin-top: -11px;
 }

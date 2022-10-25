@@ -75,7 +75,6 @@ function filterTable() {
     if (text.length < 3) {
         return;
     }
-
     for (let tdAttribute of myTr) {
         let attrDescript = tdAttribute.children[2].innerText;
         let attrName = tdAttribute.children[1].innerText;

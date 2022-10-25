@@ -2,6 +2,7 @@
 namespace ElementoPHP;
 
 use iToJsonPHP\IToJson;
+
 class Element implements IToJson
 {
     private $name;
@@ -121,8 +122,8 @@ class Element implements IToJson
     }
     public function toJson($archivo)
     {
-        $data = json_encode(get_object_vars($this));
-        return $data;
+        return json_encode(get_object_vars($this));
+
     }
     public function writeJson($object, $ruta)
     {
@@ -133,8 +134,7 @@ class Element implements IToJson
             $datosNuevos .= $data . ",";
             file_put_contents($ruta, $datosNuevos);
             echo ("Datos guardados en " . $ruta);
-        }
-        else {
+        } else {
             echo ("El archivo no esta");
         }
 
