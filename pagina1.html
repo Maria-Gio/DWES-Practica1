@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="350">
+    <!--<meta http-equiv="refresh" content="350">-->
     <link rel="icon" type="image/x-icon" href="css/img/icono.png" />
     <meta name="keywords" content="sensor, sensores industriales, motor, maquinaria, industrial" />
     <meta name="robots" content="follow" />
@@ -17,19 +17,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="stylesheet" href="css/normalize.css" />
     <link href="css/style1.css" rel="stylesheet" type="text/css" />
-    <title>Practica 1 HTML | Página 1</title>
+    <title>Home | Página 1</title>
 </head>
 
 <body>
     <header>
         <div id="header">
-            <div id="logo">
-                <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="css/img/logo_footer.png"
-                        height="180px"></a>
-            </div>
+            <section id="header-top">
+                <div id="logo">
+                    <a href="https://www.sensorstecnics.net/pages/es/inicio.php"><img src="css/img/logo_footer.png"></a>
+                </div>
+                <div id="subtitle">
+                    <h2>Apartado de creación de items</h2>
+                </div>
+                <div id="user-icon"><img src="./css/img/usericon.png"></div>
+            </section>
+
             <div id="menuDesp">
                 <details>
-                    <summary><img src="./css/img/contacto.png" /></summary>
+                    <summary><img src="./css/img/contacto2.png" /></summary>
 
                     <form method="post">
 
@@ -44,7 +50,8 @@
                                 placeholder="Indica aquí tu consulta y te contactaremos lo más rápido posible..."></textarea>
                         </div>
                         <div class="emailCheck">
-                            <p><input type="checkbox" id="check" checked><label for="check"> Enviar ofertas y promociones a mi dirección de e-mail</label>
+                            <p><input type="checkbox" id="check" checked><label for="check"> Enviar ofertas y
+                                    promociones a mi dirección de e-mail</label>
                         </div>
                         <div id="menuDespButton">
                             <button class="button" id="contactButton">Enviar</button>
@@ -60,28 +67,33 @@
         <div id="links">
             <h3>Directorio</h3>
             <ul>
-                <li>
-                    <a href="pagina1.html">Página 1</a>
-                </li>
-                <li>
-                    <a href="pagina2.html">Página 2</a>
-                </li>
-                <li>
-                    <a href="pagina3.html">Página 3</a>
-                </li>
-                <li>
-                    <a href="pagina4.html">Página 4</a>
-                </li>
-                <li>
-                    <a href="pagina5.html">Página 5</a>
-                </li>
+                <div class="li-wrapper">
+                    <li>
+                        <a href="pagina1.html">Home</a>
+                    </li>
+                </div>
+                <div class="li-wrapper">
+                    <li>
+                        <a href="pagina2.html">Tabla</a>
+                    </li>
+                </div>
+                <div class="li-wrapper">
+                    <li>
+                        <a href="pagina3.html">Galería</a>
+                    </li>
+                </div>
+                <div class="li-wrapper">
+                    <li>
+                        <a href="pagina4.html">Sobre nosotros</a>
+                    </li>
+                </div>
+                <div class="li-wrapper">
+                    <li>
+                        <a href="pagina5.html">Localización</a>
+                    </li>
+                </div>
             </ul>
         </div>
-        <div id="subtitle">
-            <h2>Apartado de creación de items</h2>
-        </div>
-
-        <br>
         <div id="princContent">
             <div id="formulario">
                 <form action="createElement.php" method="POST">
@@ -116,8 +128,8 @@
                             <label for="p_status">Modelo activo</label>
                         </div>
                         <div id="formContent-buttons">
-                            <button class="button"id="buildFormButton">Enviar</button>
-                            <button class="button"id="resetButton">Reset</button>
+                            <button class="button" id="buildFormButton">Enviar</button>
+                            <button class="button" id="resetButton">Reset</button>
                         </div>
 
                     </div>

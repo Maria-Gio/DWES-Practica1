@@ -99,6 +99,7 @@ footer {
     display: inline-block;
 }
 
+
 #menuDesp details[open] {
     position: relative;
     left: -23em;
@@ -108,8 +109,30 @@ footer {
     width: 26em;
     padding-top: 0px;
     box-shadow: 2.5px 4px #80808057;
-    background-color: rgb(17 0 65 / 35%);
-    backdrop-filter: 2%;
+    background-color: rgb(143 144 191);
+    z-index: 1;
+}
+
+
+/**No se como retrasar el efecto del click en la imagen que despliega el details, la animacion funciona, le di delay de mas para ver si surtia efecto, y nada**/
+details img :active {
+    animation-name: desaparece;
+    animation-duration: 10s;
+    animation-delay: 10s;
+    animation-iteration-count: 1;
+}
+
+@keyframes desaparece {
+
+    0% {
+        margin-top: 0em;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 2em;
+        opacity: 0;
+    }
 }
 
 #menuDesp details[open] img {
@@ -122,8 +145,9 @@ footer {
 }
 
 #menuDesp img {
-    height: 74px;
-    width: 71px;
+    height: 65px;
+    width: 66px;
+    padding-top: 3px;
 }
 
 details[open]>summary:first-of-type {
@@ -189,6 +213,25 @@ details>summary:first-of-type {
     align-items: center;
 }
 
+#links ul {
+    animation-name: apareceDerecha;
+    animation-duration: 1.7s;
+    /* animation-delay: 3s; */
+    animation-iteration-count: 1;
+}
+
+@keyframes apareceDerecha {
+
+    /* al definir los keyframes de la animación también la otorgamos un nombre*/
+    0% {
+        margin-left: -47em;
+    }
+
+    100% {
+        margin-left: 0em;
+    }
+}
+
 #links li {
     list-style: none;
     display: inline;
@@ -250,25 +293,53 @@ details>summary:first-of-type {
     font-size: 17px;
 }
 
-/*Contenido principal*/
 #subtitle {
-    left: 41.5em;
-    margin-top: 19px;
-    position: absolute;
+    margin-top: 8px;
+    margin-left: 29em;
     display: flex;
     align-items: center;
     height: 3em;
     backdrop-filter: blur(1px);
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0 0 15px;
-    background: rgb(61 57 57 / 10%);
-    color: #2c2c30;
+    box-shadow: 0 0 15px #b4b3b9;
+    background: #625B7F;
+    color: #e4e4e4;
+    text-shadow: 1.1px 1.1px #000000c7;
 }
+
+#header-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#user-icon {
+    position: relative;
+    left: 37.1em;
+}
+
+/*Contenido principal*/
+
 
 #princContent {
     display: grid;
+    padding-top: 3em;
     place-items: center;
+    animation-name: aparece;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes aparece {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 
 }
 
@@ -285,7 +356,7 @@ details>summary:first-of-type {
 
 #divFinderInput {
     margin-bottom: 8px;
-    
+    padding-left: 7em;
 }
 
 #searchInput {
@@ -307,8 +378,8 @@ th {
 }
 
 td {
-    background-color: #bbbfc1;
     padding: 5px;
+    border-bottom: 2px solid #41434391;
 }
 
 tr {
@@ -316,7 +387,8 @@ tr {
 }
 
 table {
-    border-spacing: 0 4px;
+    margin-top: -5px;
+    border-collapse: collapse;
 }
 
 table button {
@@ -334,9 +406,7 @@ table button:hover {
     box-shadow: inset 1.5px 2.5px #080808b5;
 }
 
-#tableBody tr {
-    border: 3px solid blue;
-}
+
 
 #searchButton {
     margin-bottom: -3px;
@@ -355,5 +425,11 @@ table button:hover {
 #restoreButton {
     width: 100px;
     background-color: #b9b9f6b5;
-    margin-top: 5px;
+    margin-top: 8px;
+}
+
+#cuerpoTabla {
+    background: #c0bed48a;
+    margin-top: 1em;
+
 }

@@ -28,7 +28,7 @@ const JSon = [{
     "id_num": "109235-X2",
     "status": true,
     "priority": "High"
-}]
+}];
 function checkInput() {
     if (searchInput.value.length > 3) {
 
@@ -51,7 +51,7 @@ function createTable() {
 
             let tableRow = Object.entries(JSon[i]);
             for (let attribute of tableRow) {
-                let tdWrite = `<td>${attribute[1]}</td>`
+                let tdWrite = `<td>${attribute[1]}</td>`;
                 text += tdWrite;
             }
 
@@ -80,9 +80,9 @@ function filterTable() {
         let attrName = tdAttribute.children[1].innerText;
 
         if (attrDescript.toLowerCase().includes(text) || attrName.toLowerCase().includes(text)) {
-            tdAttribute.style.backgroundColor = "blue"
+            tdAttribute.style.backgroundColor = "#e30e0e6e"
         } else {
-            tdAttribute.style.backgroundColor = "transparent";
+            tdAttribute.style.backgroundColor="transparent";
         }
     }
 }
